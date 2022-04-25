@@ -3,6 +3,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:uzair_ali_app/routes.dart';
 
 class MyHome extends StatelessWidget {
   @override
@@ -58,24 +59,29 @@ class MyHome extends StatelessWidget {
                         fontWeight: FontWeight.w600, color: Colors.grey[600]),
                   ),
                   SizedBox(height: 25),
-                  Container(
-                    decoration: BoxDecoration(boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.shade600,
-                        offset: Offset(4, 4),
-                      ),
-                      BoxShadow(
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, MyRoutes.pag1Route);
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.shade600,
+                          offset: Offset(4, 4),
+                        ),
+                        BoxShadow(
+                          color: Colors.white,
+                          offset: Offset(-5, -5),
+                          blurRadius: 9,
+                        ),
+                      ], color: Colors.black, shape: BoxShape.circle),
+                      height: 90,
+                      width: 90,
+                      child: Icon(
+                        Icons.arrow_forward_rounded,
                         color: Colors.white,
-                        offset: Offset(-5, -5),
-                        blurRadius: 9,
+                        size: 35,
                       ),
-                    ], color: Colors.black, shape: BoxShape.circle),
-                    height: 90,
-                    width: 90,
-                    child: Icon(
-                      Icons.arrow_forward_rounded,
-                      color: Colors.white,
-                      size: 35,
                     ),
                   )
                 ],
