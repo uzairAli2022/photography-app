@@ -1,17 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:uzair_ali_app/network_images.dart';
+import 'package:uzair_ali_app/list_items.dart';
+import 'package:uzair_ali_app/my_screens/item_widget.dart';
 
 class MyPage1 extends StatelessWidget {
-  String url3 =
-      "https://cdn.pixabay.com/photo/2017/02/07/16/47/kingfisher-2046453_960_720.jpg";
   @override
   Widget build(BuildContext context) {
+    final dumyList = List.generate(50, (index) => CatalogMain.products[0]);
     return Scaffold(
         appBar: AppBar(title: Text('PhotoGraphy')),
-        body: Column(
-          children: [
-            //   Image.network(url3),
-          ],
+        body: Card(
+          child: Container(
+              padding: EdgeInsets.all(12),
+              height: 100,
+              width: 450,
+              child: ListView.builder(
+                  itemCount: dumyList.length,
+                  itemBuilder: (context, index) {
+                    return ItemWidget(
+                      products: dumyList[index],
+                    );
+                  })),
         ));
   }
 }

@@ -1,0 +1,32 @@
+[
+    {
+        "name":"uzair ali",
+        "age":"32",
+        "stars":"3.6",
+        "iswomen":"false"
+    },
+    {
+        "name":"zeshan khan",
+        "age":"27",
+        "rating":"4.6",
+        "isman":"true"
+
+
+    },
+    {
+        "name":"kaka",
+        "age":"23",
+        "rating":"1.3",
+        "isman":"true"
+
+
+    },
+    {
+        "name":"danial khan",
+        "age":"31",
+        "rating":"4.1",
+        "isman":"true"
+
+
+    }
+]
