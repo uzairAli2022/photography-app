@@ -4,6 +4,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:uzair_ali_app/routes.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MyHome extends StatelessWidget {
   @override

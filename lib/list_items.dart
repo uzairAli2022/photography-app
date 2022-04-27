@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/cupertino.dart';
 
 class Items {
@@ -7,7 +9,7 @@ class Items {
   final String price;
   final String image;
 
-  Items(
+  const Items(
       {required this.id,
       required this.name,
       required this.desc,

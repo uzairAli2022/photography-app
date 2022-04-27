@@ -1,32 +1,56 @@
-[
+{
+ "myfile" : [
+   
     {
-        "name":"uzair ali",
-        "age":"32",
-        "stars":"3.6",
-        "iswomen":"false"
+        "id":1,
+        "name":"iphone 11",
+        "comp":"apple",
+        "price":5463,
+        "pic":"https://www.gizmochina.com/wp-content/uploads/2019/09/Apple-iPhone-11-Pro.jpg"
     },
+    
     {
-        "name":"zeshan khan",
-        "age":"27",
-        "rating":"4.6",
-        "isman":"true"
-
-
+        "id":2,
+        "name":"Oppo X2",
+        "comp":"OPPO",
+        "price":45674,
+        "pic":"https://www.notebookcheck.net/fileadmin/Notebooks/Oppo/Find_X2_Pro/Oppo_Find_X2_Pro64.jpg"
     },
-    {
-        "name":"kaka",
-        "age":"23",
-        "rating":"1.3",
-        "isman":"true"
+   
 
 
-    },
-    {
-        "name":"danial khan",
-        "age":"31",
-        "rating":"4.1",
-        "isman":"true"
+{
+    "id":3,
+    "name":"summsung a51",
+    "comp":"SUMMSUNG",
+    "price":35632,
+    "pic":" https://www.techjuice.pk/wp-content/uploads/2021/03/samsung-galaxy-a51-pakistan-priceoye-rb48d_480x480@2x.jpg"
+},
+ {
+    "id":4,
+    "name":"summsung a32",
+    "comp":"SUMMSUNG",
+    "price":54366,
+    "pic":"https://images.priceoye.pk/samsung-galaxy-a32-pakistan-priceoye-ln9pa.jpg"
+},
+{
+    "id":5,
+    "name":"summsung s10",
+    "comp":"SUMMSUNG",
+    "price":945674,
+    "pic":"https://cdn.alloallo.media/catalog/product/samsung/galaxy-s/galaxy-s10/galaxy-s10-cardinal-red.jpg"
+},
+{
+    "id":6,
+    "name":"iphone 13 pro",
+    "comp":"APPLE",
+    "price":745674,
+    "pic":"https://images.priceoye.pk/apple-iphone-13-pro-pakistan-priceoye-wb6qy.jpg"
+}
 
 
-    }
-]
+
+
+ ]
+}
+
