@@ -62,7 +62,7 @@ class MyHome extends StatelessWidget {
                   SizedBox(height: 25),
                   InkWell(
                     onTap: () {
-                      Navigator.pushNamed(context, MyRoutes.pag1Route);
+                      Navigator.pushNamed(context, MyRoutes.loginRoute);
                     },
                     child: Container(
                       decoration: BoxDecoration(boxShadow: [

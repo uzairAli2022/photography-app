@@ -21,21 +21,24 @@ class _MyPage1State extends State<MyPage1> {
     final catalogJson = await rootBundle.loadString("load_jason/myfile.json");
     final decodedData = jsonDecode(catalogJson);
     var productData = decodedData["myfile"];
-    print(productData);
+
+    CatalogModel.products = List.from(productData)
+        .map<Items>((products) => Items.fromMap(products))
+        .toList();
+    setState(() {});
   }
 
   @override
   Widget build(BuildContext context) {
-    final dumyList = List.generate(20, (index) => CatalogMain.products[0]);
     return Scaffold(
       appBar: AppBar(title: Text('PhotoGraphy')),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: ListView.builder(
-            itemCount: dumyList.length,
+            itemCount: CatalogModel.products.length,
             itemBuilder: (context, index) {
               return ItemWidget(
-                products: dumyList[index],
+                products: CatalogModel.products[index],
               );
             }),
       ),

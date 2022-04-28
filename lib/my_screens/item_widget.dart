@@ -19,12 +19,12 @@ class ItemWidget extends StatelessWidget {
           onTap: () async {
             await Navigator.pushNamed(context, MyRoutes.homeRoute);
           },
-          leading: Image.network(products.image),
+          leading: Image.network(products.pic),
           title: Text(
             products.name,
             style: TextStyle(color: Colors.white),
           ),
-          subtitle: Text(products.desc),
+          subtitle: Text(products.comp),
           trailing: Text(
             products.price,
             style: TextStyle(color: Colors.deepPurple, fontSize: 20),
