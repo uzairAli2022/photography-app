@@ -38,91 +38,97 @@ class _LoginPageState extends State<LoginPage> {
                 height: 400,
                 width: 360,
                 child: Column(children: [
-                  Text(
-                    "LogIn",
-                    style: GoogleFonts.anton(
-                        color: Color.fromARGB(255, 11, 92, 146),
-                        fontSize: 30,
-                        fontWeight: FontWeight.w900),
-                  ),
-                  SizedBox(height: 20),
-                  Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: TextFormField(
-                      decoration: InputDecoration(
-                          hintText: "Enter Email",
-                          hintStyle: TextStyle(color: Colors.grey.shade500),
-                          labelText: "Email",
-                          suffixIcon: Icon(Icons.check_box_rounded),
-                          border: OutlineInputBorder()),
-                    ),
-                  ),
-                  SizedBox(height: 8),
-                  Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: TextFormField(
-                      obscureText: passwrdsec,
-                      decoration: InputDecoration(
-                          hintText: "Enter passwerd",
-                          hintStyle: TextStyle(color: Colors.grey.shade400),
-                          labelText: "Passwerd",
-                          suffixIcon: InkWell(
-                              onTap: () async {
-                                setState(() {
-                                  passwrdsec = false;
-                                });
-                                await Future.delayed(Duration(seconds: 1));
-                                setState(() {
-                                  passwrdsec = true;
-                                });
-                              },
-                              child: passwrdsec
-                                  ? Icon(Icons.remove_red_eye)
-                                  : Icon(
-                                      Icons.remove_red_eye,
-                                      color: Colors.red,
-                                    )),
-                          border: OutlineInputBorder()),
-                    ),
-                  ),
-                  SizedBox(height: 55),
-                  InkWell(
-                    onTap: () async {
-                      setState(() {
-                        loginpress = true;
-                      });
-                      await Future.delayed(Duration(seconds: 1));
-                      //  await Navigator.pushNamed(
-                      //    context, MyRoutes.pag1Route);
-                    },
-                    child: AnimatedContainer(
-                      duration: Duration(seconds: 1),
-                      width: loginpress ? 50 : 80,
-                      height: loginpress ? 50 : 80,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: loginpress
-                            ? Colors.green
-                            : Colors.black.withOpacity(0.7),
+                  Container(
+                    child: Column(children: [
+                      Text(
+                        "LogIn",
+                        style: GoogleFonts.anton(
+                            color: Color.fromARGB(255, 11, 92, 146),
+                            fontSize: 30,
+                            fontWeight: FontWeight.w900),
                       ),
-                      child: Center(
-                        child: loginpress
-                            ? Icon(
-                                Icons.check,
-                                color: Colors.white,
-                                size: 25,
-                              )
-                            : Text(
-                                "LogIn",
-                                style: GoogleFonts.adamina(
+                      SizedBox(height: 20),
+                      Padding(
+                        padding: const EdgeInsets.all(12.0),
+                        child: TextFormField(
+                          decoration: InputDecoration(
+                              hintText: "Enter Email",
+                              hintStyle: TextStyle(color: Colors.grey.shade500),
+                              labelText: "Email",
+                              suffixIcon: Icon(Icons.check_box_rounded),
+                              border: OutlineInputBorder()),
+                        ),
+                      ),
+                      SizedBox(height: 8),
+                      Padding(
+                        padding: const EdgeInsets.all(12.0),
+                        child: TextFormField(
+                          obscureText: passwrdsec,
+                          decoration: InputDecoration(
+                              hintText: "Enter passwerd",
+                              hintStyle: TextStyle(color: Colors.grey.shade400),
+                              labelText: "Passwerd",
+                              suffixIcon: InkWell(
+                                  onTap: () async {
+                                    setState(() {
+                                      passwrdsec = false;
+                                    });
+                                    await Future.delayed(Duration(seconds: 1));
+                                    setState(() {
+                                      passwrdsec = true;
+                                    });
+                                  },
+                                  child: passwrdsec
+                                      ? Icon(Icons.remove_red_eye)
+                                      : Icon(
+                                          Icons.remove_red_eye,
+                                          color: Colors.green,
+                                        )),
+                              border: OutlineInputBorder()),
+                        ),
+                      ),
+                      SizedBox(height: 55),
+                      InkWell(
+                        onTap: () async {
+                          setState(() {
+                            loginpress = true;
+                          });
+                          await Future.delayed(Duration(seconds: 1));
+                          await Navigator.pushNamed(
+                              context, MyRoutes.profile1route);
+                          setState(() {
+                            loginpress = false;
+                          });
+                        },
+                        child: AnimatedContainer(
+                          duration: Duration(seconds: 1),
+                          width: loginpress ? 50 : 80,
+                          height: loginpress ? 50 : 80,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: loginpress
+                                ? Colors.green
+                                : Colors.black.withOpacity(0.7),
+                          ),
+                          child: Center(
+                            child: loginpress
+                                ? Icon(
+                                    Icons.check,
                                     color: Colors.white,
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.bold),
-                              ),
+                                    size: 25,
+                                  )
+                                : Text(
+                                    "LogIn",
+                                    style: GoogleFonts.adamina(
+                                        color: Colors.white,
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                          ),
+                        ),
                       ),
-                    ),
-                  ),
-                  SizedBox(height: 25),
+                    ]),
+                  )
                 ]),
               ),
             ),

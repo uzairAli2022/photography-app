@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:uzair_ali_app/home_pge.dart';
 import 'package:uzair_ali_app/my_screens/login_page.dart';
 import 'package:uzair_ali_app/my_screens/photos_pag1.dart';
+import 'package:uzair_ali_app/my_screens/profile_one.dart';
 import 'package:uzair_ali_app/routes.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
         MyRoutes.pag1Route: (context) => MyPage1(),
         MyRoutes.homeRoute: (context) => MyHome(),
         MyRoutes.loginRoute: (context) => LoginPage(),
+        MyRoutes.profile1route: (context) => ProfileOne(),
       },
     );
   }
